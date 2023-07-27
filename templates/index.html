@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <div class="jumbotron text-center">
+        <h3>Yazilim Bilimi Bloguna Hosgeldiniz</h3>
+        <p>Bu blogta gelistiriciler olarak blog yazilarinizi paylasabilirsiniz ve insanlara yardimci olabilirsiniz.</p>
+    </div>
+    {% if request.user.is_authenticated %}
+        <p>Merhaba, {{request.user.username}}</p>
+    {% endif %}
+{% endblock body %}
